@@ -23,6 +23,15 @@ int Add(string numbers)
 
             for(int i=0; i<numbers.length(); i++)
             {
+                if(numbers[i] == ',' && numbers[i+1] == '\n' && (i+1) < numbers.length())
+                {
+                    cout << "Input not valid!";
+                    exit(0);
+                }
+                     
+                if(numbers[i] == '\n')
+                    continue;
+
                 if(numbers[i] == ',')
                 {
                     v1.push_back(str);
